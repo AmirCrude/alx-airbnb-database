@@ -18,4 +18,4 @@
 - Verified that all non-key attributes depend only on the primary key.
 - No transitive dependencies in any table.
 
-## No need of Normalization
+## No need of Normalization (Already it is on 3NF)
