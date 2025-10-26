@@ -67,9 +67,9 @@ Simulates communication between host and guest:
 3. **Execute the script** by clicking the **Run** button.
 4. After it runs successfully, you can verify the data by running:
    ```
-   SELECT * FROM "User";
-   SELECT * FROM "Property";
-   SELECT * FROM "Booking";
+   SELECT * FROM User;
+   SELECT * FROM Property;
+   SELECT * FROM Booking;
    ```
 
 ## Summary
