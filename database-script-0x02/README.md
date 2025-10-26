@@ -17,6 +17,8 @@ Four sample users are added to represent different roles:
 - **Host**: Owns and lists properties.
 - **Guests**: Can book properties and leave reviews.
 
+**Note:** The table name User is a keyword reserved for security purposes. "User" is a valid name.
+
 ### 2. Properties
 
 Two properties are added under the host user:
@@ -67,7 +69,7 @@ Simulates communication between host and guest:
 3. **Execute the script** by clicking the **Run** button.
 4. After it runs successfully, you can verify the data by running:
    ```
-   SELECT * FROM User;
+   SELECT * FROM "User";
    SELECT * FROM Property;
    SELECT * FROM Booking;
    ```

@@ -1,4 +1,4 @@
-INSERT INTO User (user_id, first_name, last_name, email, password_hash, phone_number, role, created_at)
+INSERT INTO "User" (user_id, first_name, last_name, email, password_hash, phone_number, role, created_at)
 VALUES
     ('b2c1f6d0-4a88-4a29-9e31-112233445501', 'Amir', 'Abdu', 'amir@airbnb.com', 'hashed_pw_1', '+251911000001', 'admin', NOW()),
     ('d3e2a5b9-5b01-4f19-8a2e-112233445502', 'Sara', 'Kebede', 'sara@airbnb.com', 'hashed_pw_2', '+251911000002', 'host', NOW()),
