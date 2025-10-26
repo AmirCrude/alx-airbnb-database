@@ -1,0 +1,18 @@
+## 🧩 Database Normalization
+
+### Step 1: First Normal Form (1NF)
+- All tables contain atomic values.
+- Each table has a unique primary key (UUID).
+- No repeating groups or multi-valued attributes.
+✅ All tables satisfy 1NF.
+
+### Step 2: Second Normal Form (2NF)
+- Each table has a single-column primary key.
+- No partial dependencies on composite keys.
+✅ All tables satisfy 2NF automatically.
+
+### Step 3: Third Normal Form (3NF)
+- Verified that all non-key attributes depend only on the primary key.
+- No transitive dependencies in any table.
+
+## No need of Normalization
