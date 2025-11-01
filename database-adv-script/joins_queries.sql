@@ -1,4 +1,4 @@
-﻿```sql
+﻿
 -- 1. INNER JOIN: Retrieve all bookings with user details
 -- Ordered by booking start date (earliest first)
 SELECT 
@@ -43,4 +43,3 @@ FROM User u
 FULL OUTER JOIN Booking b
 ON u.user_id = b.user_id
 ORDER BY u.last_name ASC, b.start_date ASC;
-```
