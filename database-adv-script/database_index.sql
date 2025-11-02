@@ -34,3 +34,7 @@ FROM "User" u
 LEFT JOIN Booking b ON u.user_id = b.user_id
 GROUP BY u.user_id, u.first_name, u.last_name
 ORDER BY total_bookings DESC;
+
+
+-- Added composite indexes to improve joins and filtering
+CREATE INDEX idx_booking_status_date ON Booking(status, start_date);
