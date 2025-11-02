@@ -2,6 +2,7 @@
 -- Step 1: Initial Query (Before Optimization)
 -- ==========================================
 
+EXPLAIN ANALYZE
 SELECT 
     b.booking_id,
     b.start_date,
@@ -10,17 +11,15 @@ SELECT
     b.status,
     u.first_name,
     u.last_name,
-    u.email,
     p.name AS property_name,
-    p.location,
-    pay.amount AS payment_amount,
-    pay.payment_method,
-    pay.payment_date
+    pay.amount AS payment_amount
 FROM Booking b
 JOIN "User" u ON b.user_id = u.user_id
 JOIN Property p ON b.property_id = p.property_id
 LEFT JOIN Payment pay ON b.booking_id = pay.booking_id
+WHERE b.status = 'confirmed' AND p.location = 'Nairobi'
 ORDER BY b.created_at DESC;
+
 
 
 
@@ -34,6 +33,7 @@ ORDER BY b.created_at DESC;
 -- 3. Ensured indexes exist on join/filter columns
 -- 4. Reduced JOINs to only essential tables
 
+EXPLAIN ANALYZE
 SELECT 
     b.booking_id,
     b.start_date,
@@ -45,4 +45,6 @@ FROM Booking b
 JOIN "User" u ON b.user_id = u.user_id
 JOIN Property p ON b.property_id = p.property_id
 LEFT JOIN Payment pay ON b.booking_id = pay.booking_id
+WHERE b.status = 'confirmed' AND p.location = 'Nairobi'
 ORDER BY b.start_date DESC;
+
